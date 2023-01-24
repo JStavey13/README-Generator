@@ -40,13 +40,17 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile('newREADME.md', data, (err) =>
+    err ? console.Console(err) : console.log('success'))
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
     .prompt(questions)
-    .then((answers) => console.log(answers));
+    console.log(answers)
+    .then((answers) => writeToFile());
 };
 
 // Function call to initialize app
