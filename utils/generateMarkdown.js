@@ -22,6 +22,8 @@ else {
 }
 }
 
+
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
@@ -29,6 +31,15 @@ function generateMarkdown(data) {
    ${data.description}
   ${renderLicenseSection(data.license)}
   ${renderLicenseBadge(data.license)}
+
+  ## How to install the app
+  ${data.installation}
+
+  ## How to report issues
+  ${data.issues}
+
+  ## How to contribute
+  ${data.contribute}
 `;
 }
 
